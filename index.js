@@ -51,3 +51,17 @@ setTimeout(function(){
       $("#work").removeClass("animated fadeIn");
     },1000);
 },1500);
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "imanjustforreal@gmail.com",
+        Password : "imanlangaran79",
+        To : 'imanlangaran@gmail.com',
+        From : $("#contact_email").val(),
+        Subject : "New contact from personal website",
+        Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+}
